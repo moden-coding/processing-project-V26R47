@@ -5,6 +5,8 @@ public class App extends PApplet {
     float twelthRoot = (float) Math.pow(2, 1.0 / 12.0);
     float minDiameter = 6.25f;
     float maxDiameter = 100;
+    String displayMessage = "Play A";
+    int messageNumber = 0;
 
     public static void main(String[] args) {
         PApplet.main("App");
@@ -20,6 +22,7 @@ public class App extends PApplet {
     }
 
     public void draw() {
+        background(200);
         fill(255, 255, 0);
         ellipse(350, 350, 300, 300);
         fill(255);
@@ -38,7 +41,7 @@ public class App extends PApplet {
         arc(350, 387.5f, 50, 50, 0, PI);
         fill(128, 0, 128);
         textSize(50);
-        text("Play A", 50, 50);
+        text(displayMessage, 50, 50);
         }
 
 
@@ -55,9 +58,14 @@ public class App extends PApplet {
                 mouthSize /= twelthRoot;
             }
         }
-        if((int)mouthSize == 100 || (int)mouthSize == 50 || (int)mouthSize == 25 || (int)mouthSize == 12.5 || (int)mouthSize == 6.25) {
+        if((int)mouthSize == 74) {
             System.out.println("Played A");
             text("Great job!", 50, 600);
+    }   if (keyCode == ENTER) {
+            messageNumber++;
+            if(messageNumber == 1){
+            displayMessage = "Play B";
+            }
     }
 }
 }
