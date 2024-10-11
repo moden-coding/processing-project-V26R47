@@ -42,6 +42,31 @@ public class App extends PApplet {
         fill(128, 0, 128);
         textSize(50);
         text(displayMessage, 50, 50);
+        if(messageNumber == 1){
+            displayMessage = "Play Bb";
+            } else if(messageNumber == 2){
+                displayMessage = "Play B";
+            } else if(messageNumber == 3){
+                displayMessage = "Play C";
+            } else if(messageNumber == 4){
+                displayMessage = "Play C#";
+            } else if(messageNumber == 5){
+                displayMessage = "Play D";
+            } else if(messageNumber == 6){
+                displayMessage = "Play Eb";
+            } else if(messageNumber == 7){
+                displayMessage = "Play E";
+            } else if(messageNumber == 8){
+                displayMessage = "Play F";
+            } else if(messageNumber == 9){
+                displayMessage = "Play F#";
+            } else if(messageNumber == 10){
+                displayMessage = "Play G";
+            } else if(messageNumber == 11){
+                displayMessage = "Play Ab";
+            } else if(messageNumber == 12){
+                displayMessage = "Play A";
+            }
         }
 
 
@@ -58,14 +83,63 @@ public class App extends PApplet {
                 mouthSize /= twelthRoot;
             }
         }
-        if((int)mouthSize == 74) {
+        if(messageNumber == 0 && (int)mouthSize == 50) {
             System.out.println("Played A");
             text("Great job!", 50, 600);
-    }   if (keyCode == ENTER) {
             messageNumber++;
-            if(messageNumber == 1){
-            displayMessage = "Play B";
-            }
+    } else if(messageNumber == 1 && (int)mouthSize == 52) {
+        System.out.println("Played Bb");
+        text("Great job!", 50, 600);
+        messageNumber++;
+    } else if(messageNumber == 2 && (int)mouthSize == 56) {
+        System.out.println("Played B");
+        text("Great job!", 50, 600);
+        messageNumber++;
+    } else if(messageNumber == 3 && (int)mouthSize == 59) {
+        System.out.println("Played C");
+        text("Great job!", 50, 600);
+        messageNumber++;
+    } else if(messageNumber == 4 && (int)mouthSize == 62) {
+        System.out.println("Played C#");
+        text("Great job!", 50, 600);
+        messageNumber++;
+    } else if(messageNumber == 5 && (int)mouthSize == 66) {
+        System.out.println("Played D");
+        text("Great job!", 50, 600);
+        messageNumber++;
+    } else if(messageNumber == 6 && (int)mouthSize == 70) {
+        System.out.println("Played Eb");
+        text("Great job!", 50, 600);
+        messageNumber++;
+    } else if(messageNumber == 7 && (int)mouthSize == 74) {
+        System.out.println("Played E");
+        text("Great job!", 50, 600);
+        messageNumber++;
+    } else if(messageNumber == 8 && (int)mouthSize == 79) {
+        System.out.println("Played F");
+        text("Great job!", 50, 600);
+        messageNumber++;
+    } else if(messageNumber == 9 && (int)mouthSize == 84) {
+        System.out.println("Played F#");
+        text("Great job!", 50, 600);
+        messageNumber++;
+    } else if(messageNumber == 10 && (int)mouthSize == 89) {
+        System.out.println("Played G");
+        text("Great job!", 50, 600);
+        messageNumber++;
+    } else if(messageNumber == 11 && (int)mouthSize == 94) {
+        System.out.println("Played Ab");
+        text("Great job!", 50, 600);
+        messageNumber++;
+    } else if(messageNumber == 12 && (int)mouthSize == 100) {
+        System.out.println("Played A");
+        text("Great job!", 50, 600);
+        messageNumber++;
     }
+
+    if (keyCode == ENTER) {
+            
+            
+}
 }
 }
