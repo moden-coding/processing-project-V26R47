@@ -7,7 +7,6 @@ public class App extends PApplet {
     float maxDiameter = 100;
     String displayMessage = "Play A";
     int messageNumber = 0;
-
     public static void main(String[] args) {
         PApplet.main("App");
     }
@@ -33,7 +32,7 @@ public class App extends PApplet {
         ellipse(400, 300, 25, 25);
         fill(255, 100, 0);
         triangle(350, 300, 300, 350, 400, 350);
-        fill(0, 0, 139);
+        fill(0, 0, 139);                                                                            
         ellipse(350, 400, mouthSize, mouthSize);
         fill(0, 255, 255, 150);
         rect(312.5f, 350, 75, 75);
@@ -42,6 +41,7 @@ public class App extends PApplet {
         fill(128, 0, 128);
         textSize(50);
         text(displayMessage, 50, 50);
+        
         if(messageNumber == 1){
             displayMessage = "Play Bb";
             } else if(messageNumber == 2){
@@ -73,12 +73,13 @@ public class App extends PApplet {
     public void keyPressed() {
         if (keyCode == RIGHT) {
             System.out.println("diameter is " + mouthSize);
-            System.out.println("max diameter is " + maxDiameter);
             if (mouthSize < maxDiameter) {
                 mouthSize *= twelthRoot;
             }
         }
         if (keyCode == LEFT) {
+            System.out.println("diameter is " + mouthSize);
+            ;
             if (mouthSize > minDiameter) {
                 mouthSize /= twelthRoot;
             }
@@ -87,7 +88,7 @@ public class App extends PApplet {
             System.out.println("Played A");
             text("Great job!", 50, 600);
             messageNumber++;
-    } else if(messageNumber == 1 && (int)mouthSize == 52) {
+    } else if(messageNumber == 1 && (int)mouthSize == 26) {
         System.out.println("Played Bb");
         text("Great job!", 50, 600);
         messageNumber++;
@@ -95,11 +96,11 @@ public class App extends PApplet {
         System.out.println("Played B");
         text("Great job!", 50, 600);
         messageNumber++;
-    } else if(messageNumber == 3 && (int)mouthSize == 59) {
+    } else if(messageNumber == 3 && (int)mouthSize == 29) {
         System.out.println("Played C");
         text("Great job!", 50, 600);
         messageNumber++;
-    } else if(messageNumber == 4 && (int)mouthSize == 62) {
+    } else if(messageNumber == 4 && (int)mouthSize == 15) {
         System.out.println("Played C#");
         text("Great job!", 50, 600);
         messageNumber++;
@@ -107,11 +108,11 @@ public class App extends PApplet {
         System.out.println("Played D");
         text("Great job!", 50, 600);
         messageNumber++;
-    } else if(messageNumber == 6 && (int)mouthSize == 70) {
+    } else if(messageNumber == 6 && (int)mouthSize == 17) {
         System.out.println("Played Eb");
         text("Great job!", 50, 600);
         messageNumber++;
-    } else if(messageNumber == 7 && (int)mouthSize == 74) {
+    } else if(messageNumber == 7 && (int)mouthSize == 37) {
         System.out.println("Played E");
         text("Great job!", 50, 600);
         messageNumber++;
@@ -119,7 +120,7 @@ public class App extends PApplet {
         System.out.println("Played F");
         text("Great job!", 50, 600);
         messageNumber++;
-    } else if(messageNumber == 9 && (int)mouthSize == 84) {
+    } else if(messageNumber == 9 && (int)mouthSize == 21) {
         System.out.println("Played F#");
         text("Great job!", 50, 600);
         messageNumber++;
@@ -127,7 +128,7 @@ public class App extends PApplet {
         System.out.println("Played G");
         text("Great job!", 50, 600);
         messageNumber++;
-    } else if(messageNumber == 11 && (int)mouthSize == 94) {
+    } else if(messageNumber == 11 && (int)mouthSize == 47) {
         System.out.println("Played Ab");
         text("Great job!", 50, 600);
         messageNumber++;
